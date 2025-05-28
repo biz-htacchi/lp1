@@ -23,6 +23,7 @@ body {
   line-height: 1.6;
   font-size: 1rem;
   font-weight: 400;
+  color: #333333;
 }
 
 img {
@@ -32,6 +33,7 @@ img {
 
 a {
   text-decoration: none;
+  color: #FFFFFF;
 }
 
 ul {
@@ -63,17 +65,16 @@ ul {
   font-family: 'Poppins', sans-serif;
 }
 
+.fz36{
+  font-size: 3.6rem;
+  line-height: calc(55 / 36);
+}
+
 .container {
   width: 100%;
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 1rem;
-}
-
-@media (min-width: 768px) {
-  .container {
-    padding-right: 0;
-  }
 }
 
 /* ヘッダー
@@ -159,8 +160,15 @@ ul {
     line-height: calc(36 / 20);
     color: #FFFFFF;
     border-radius: 3.3rem;
-    background: linear-gradient(to right, #0271E0, #53A2F0);;
+    background: linear-gradient(to right, #0271E0, #53A2F0);
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
   }
+
+  .header-btn-contact:hover {
+    opacity: 0.5;
+  }
+
 }
 
 /* ハンバーガーボタン */
@@ -290,5 +298,225 @@ ul {
 
   .header-nav-list .header-btn:last-child a  {
     letter-spacing: .4rem;
+  }
+}
+
+/* メインビジュアル
+--------------------------------------------------- */
+.main-visual {
+  position: relative;
+  margin-top: 7rem;
+}
+
+@media (min-width: 768px) {
+  .main-visual {
+    margin-top: 10.1rem;
+  }
+}
+
+.mv-cover {
+  overflow: hidden;
+}
+
+.mv-cover img {
+  object-fit: cover;
+  object-position: -1.5rem center;
+  max-width: none;
+  width: 104%;
+}
+
+@media (min-width: 768px) {
+  .mv-cover img {
+    object-position: -.1rem center;
+    width: 100%;
+  }
+}
+
+.mv-catch {
+  position: absolute;
+  top: 7.2%;
+  left: 4.3%;
+}
+
+@media (min-width: 768px) {
+  .mv-catch {
+    top: 16%;
+    left: 21.4%;
+    width: auto
+  }
+}
+
+.mv-result-img {
+  display: flex;
+  align-items: flex-start;
+}
+
+.mv-frame-left,
+.mv-frame-right {
+  width: 12%;
+}
+
+@media (min-width: 768px) {
+  .mv-frame-left,
+  .mv-frame-right {
+    width: 12.5%;
+  }
+
+  .mv-frame-right {
+    margin-left: 2.1rem;
+  }
+}
+
+.mv-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mv-result-text {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: calc(16 / 11);
+  padding-top: .2rem;
+}
+
+.mv-result-number {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: calc(38 / 25);
+  color: #F11F8D;
+  margin-top: -.2rem;
+  margin-left: -.1rem;
+}
+
+@media (min-width: 768px) {
+  .mv-result-text {
+    font-size: 2rem;
+    line-height: calc(29 / 20);
+    padding-top: .9rem;
+    margin-left: 1.9rem;
+  }
+
+  .mv-result-number {
+    font-size: 5.4rem;
+    line-height: calc(81 / 54);
+    margin-left: 2.9rem;
+  }
+
+  .mv-result .fz36 {
+    font-size: 7.4rem;
+    line-height: calc(111 / 74);
+  }
+}
+
+.mv-text {
+  margin-top: 1.1rem;
+}
+
+@media (min-width: 768px) {
+  .mv-text {
+    margin-top: 3.8rem;
+  }
+}
+
+.mv-subtitle {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: calc(36 / 14);
+}
+
+.mv-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: calc(36 / 25);
+  color: #005bac;
+  margin-top: -.8rem;
+}
+
+@media (min-width: 768px) {
+  .mv-subtitle {
+    font-size: 3.3rem;
+    line-height: calc(36 / 33);
+  }
+
+  .mv-title {
+    font-size: 6rem;
+    line-height: calc(85 / 60);
+    margin-top: 1.3rem;
+  }
+}
+
+
+.mv-btn-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.6rem;
+}
+
+.mv-btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: calc(36 / 16);
+  color: #FFFFFF;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+  margin-bottom: 2.4rem;
+}
+
+@media (min-width: 768px) {
+  .mv-btn-list {
+    position:absolute;
+    bottom: -5.9%;
+    left: 21.3%;
+    flex-direction: row;
+  }
+
+  .mv-btn {
+    font-size: 2.4rem;
+    line-height: calc(36 / 24);
+  }
+}
+
+.mv-btn:hover {
+  opacity: 0.5;
+}
+
+.mv-btn-inquiry {
+  padding: 1.3rem 5.4rem;
+  border-radius: 2.5rem;
+  background-color: #77CB33;
+}
+
+.mv-btn-freetrial {
+  padding: 1.3rem 5.4rem;
+  border-radius: 2.5rem;
+  background-color: #F6AA00;
+}
+
+.mv-btn-request {
+  padding: 1.3rem 7.8rem;
+  border-radius: 2.5rem;
+  background-color: #3AC8AD;
+}
+
+@media (min-width: 768px) {
+  .mv-btn-inquiry {
+    padding: 2rem 6.2rem;
+    border-radius: 4rem;
+  }
+
+  .mv-btn-freetrial {
+    padding: 2rem 6.2rem;
+    border-radius: 4rem;
+    margin-left: 4.1rem;
+    margin-right: 4rem;
+  }
+
+  .mv-btn-request {
+    padding: 2rem 9.8rem;
+    border-radius: 4rem;
   }
 }
