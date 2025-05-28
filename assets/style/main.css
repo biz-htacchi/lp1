@@ -1,0 +1,294 @@
+@charset "UTF-8";
+
+/* ページ全体のスタイル
+--------------------------------------------------- */
+html{
+  font-size: 62.5%;
+}
+
+/* レスポンシブデザインのためのフォントサイズ調整 */
+@media screen and (max-width: 1920px) and (min-width: 768px) {
+  html {
+    font-size: calc(10 / 1920 * 100vw);
+  }
+}
+@media screen and (max-width: 767.9px) {
+  html {
+    font-size: calc(10 / 375 * 100vw);
+  }
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* 部品
+--------------------------------------------------- */
+.no-sp {
+  display: none;
+}
+
+.no-pc {
+  display: inline;
+}
+
+@media (min-width: 768px) {
+  .no-sp {
+    display: inline;
+  }
+
+  .no-pc {
+    display: none;
+  }
+}
+
+/* Poppinsフォント */
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-right: 0;
+  }
+}
+
+/* ヘッダー
+--------------------------------------------------- */
+.header {
+  position: fixed;
+  top: 0;
+  background-color: #ffffff;
+  height: 7rem;
+  width: 100%;
+  z-index: 999;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 7rem
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: 10.1rem;
+    gap:15.7rem;
+    box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.1);
+  }
+
+  .header-container {
+    margin: 0 auto;
+    height: 10.1rem;
+    max-width: 120rem;
+  }
+}
+
+
+
+/* ロゴ */
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: .9rem 0 0 1.6rem;
+}
+
+.header-logo img {
+  width: 69%;
+}
+
+@media (min-width: 768px) {
+  .header-logo {
+    margin: 0;
+    padding: .7rem 0 0 2rem;
+  }
+
+  .header-logo img {
+    width: 100%;
+  }
+}
+
+.header-btn-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3.1rem 0 ;
+  padding: 1.9rem 0;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: calc(26 / 18);
+  color: #005BAC;
+  border-radius: 3.3rem;
+  background: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+  .header-btn-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 1.25rem 4.1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: calc(36 / 20);
+    color: #FFFFFF;
+    border-radius: 3.3rem;
+    background: linear-gradient(to right, #0271E0, #53A2F0);;
+  }
+}
+
+/* ハンバーガーボタン */
+.hamburger-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #005BAC;
+  padding: 1.75rem 1.95rem;
+}
+
+@media (min-width: 768px) {
+  .hamburger-button {
+    display: none;
+  }
+}
+
+.fa-bars {
+  color: #FFFFFF;
+  font-size: 3.5rem;
+}
+
+/* ハンバーガーメニュー、ヘッダーナビ
+------------------------------------------ */
+/* SP */
+@media (max-width: 767.9px) {
+  .hamburger-menu {
+    position: fixed;
+    padding: 0 1.95rem;
+    top: 7rem;
+    left: 0%;
+    width: 100%;
+    aspect-ratio: 390 / 331;
+    background-color: #005BAC;
+
+    /* 初期状態（非表示）: 画面右外に移動 */
+    transform: translateX(100%); /* 自身の幅の100%分、右に移動 */
+    visibility: hidden; /* 最初は非表示にしておく */
+    opacity: 0; /* 最初は透明にしておく */
+
+    /* アニメーションの設定 */
+    transition: transform 0.3s ease-out, visibility 0s 0.3s, opacity 0.3s ease-out;
+    }
+
+  .hamburger-menu .flex {
+    flex-direction: column;
+  }
+
+  .header-btn {
+    padding: 2rem 0.1rem 0rem 0rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    letter-spacing: .02rem;
+    line-height: calc(26 / 18);
+    border-bottom: solid .1px #FFFFFF;
+    height: 6.45rem;
+  }
+
+  .header-btn a{
+    display:flex;
+    align-items: center;
+    color: #FFFFFF;
+  }
+
+  .header-btn .fa-solid {
+    display: inline;
+    font-size: 1.5rem;
+    margin-right: 1.2rem;
+  }
+
+  .hamburger-menu-list .header-btn:last-child a {
+    letter-spacing: .4rem;
+  }
+
+  .hamburger-menu-list .header-btn:last-child a .fa-solid{
+    margin-right: .8rem;
+  }
+
+}
+
+/* スライドイン後の位置の指定 */
+.hamburger-menu-active {
+  transform: translateX(0); /* 元の位置に戻す */
+  opacity: 1;
+  visibility: visible;
+  /* アニメーションの設定 */
+  transition: transform 0.3s ease-out, visibility 0s 0s, opacity 0.3s ease-out;
+}
+
+/* ナビゲーション */
+/* PC */
+@media (min-width: 768px) {
+  .header-nav {
+    display: flex;
+    padding-right: 2rem;
+  }
+
+  .header-nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 4.45rem;
+    column-gap: 4.8rem;
+  }
+
+  .header-btn {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: calc(36 / 20);
+  }
+
+  .header-btn a {
+    color: #333333;
+  }
+
+  .header-btn:hover a{
+    color: #0A76E2;
+  }
+
+  .header-btn .fa-solid {
+    display: none;
+  }
+
+  .header-nav-list .header-btn:last-child a  {
+    letter-spacing: .4rem;
+  }
+}
