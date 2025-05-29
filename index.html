@@ -20,13 +20,16 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,400;0,700;1,700;1,800&display=swap" rel="stylesheet">
 
-        <!-- リセットCSS -->
-        <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
-        <link href="assets/style/main.css" rel="stylesheet">
-
         <!-- fontawesome -->
         <script src="https://kit.fontawesome.com/3ea11fe6fa.js" crossorigin="anonymous"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+
+        <!-- Smart Tab -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-smarttab@4/dist/css/smart_tab_all.min.css">
+
+        <!-- リセットCSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+        <link href="assets/style/main.css" rel="stylesheet">
     </head>
 
     <body>
@@ -133,14 +136,107 @@
                 <a href="https://example.com/contact" class="contact-btn">入学説明会に申し込む</a>
             </div>
 
-            <!-- <section class="course">
-            <h2 id="title-course">Kira-Kira Jukuの特長</h2>
-            <ul>
-                <li>難関大学合格実績No.1</li>
-                <li>個別指導で学力向上</li>
-                <li>最新の学習環境を提供</li>
-            </ul>
-        </section> -->
+            <section class="course">
+                <h2 id="title-course">コース・目的</h2>
+
+                <div id="js-smarttab" class="tab">
+                    <!-- タブナビゲーション -->
+                    <ul class="nav">
+                        <li><a class="nav-link" href="#tab-1">学年別から選ぶ</a></li>
+                        <li><a class="nav-link" href="#tab-2">目的別から選ぶ</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <!-- タブ1 -->
+                        <div id="tab-1" class="tab-pane" role="tabpanel">
+                            <div class="tab-inpane">
+                                <div class="tab-inpane-pc">
+                                    <!-- 1個目 -->
+                                    <div class="course-tab-content-item">
+                                        <picture>
+                                            <source media="(max-width: 767px)" srcset="assets/image/pht_cource01_sp.png">
+                                            <img class="course-image" src="assets/image/pht_cource01.png" alt="">
+                                        </picture>
+                                        <span class="course-tab-content-title"><i class="fa-solid fa-arrow-right"></i>高卒生</span>
+                                    </div>
+                                    <!-- 2個目 -->
+                                    <div class="course-tab-content-item">
+                                        <picture>
+                                            <source media="(max-width: 767px)" srcset="assets/image/pht_cource02_sp.png">
+                                            <img class="course-image" src="assets/image/pht_cource02.png" alt="">
+                                        </picture>
+                                        <span class="course-tab-content-title"><i class="fa-solid fa-arrow-right"></i>高校3年生</span>
+                                    </div>
+                                </div>
+
+                                <div class="tab-inpane-pc">
+                                    <!-- 3個目 -->
+                                    <div class="course-tab-content-item">
+                                        <picture>
+                                            <source media="(max-width: 767px)" srcset="assets/image/pht_cource03_sp.png">
+                                            <img class="course-image" src="assets/image/pht_cource03.png" alt="">
+                                        </picture>
+                                        <span class="course-tab-content-title"><i class="fa-solid fa-arrow-right"></i>高校2年生</span>
+                                    </div>
+                                    <!-- 4個目 -->
+                                    <div class="course-tab-content-item last-item">
+                                        <picture>
+                                            <source media="(max-width: 767px)" srcset="assets/image/pht_cource04_sp.png">
+                                            <img class="course-image" src="assets/image/pht_cource04.png" alt="">
+                                        </picture>
+                                        <span class="course-tab-content-title"><i class="fa-solid fa-arrow-right"></i>高校1年生</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- タブ2 -->
+                        <div id="tab-2" class="tab-pane" role="tabpanel">
+                            <div class="course-tab-inpane">
+                                <div class="tab-inpane-pc">
+                                    <!-- 1個目 -->
+                                    <div class="course-tab-content-item">
+                                        <picture>
+                                            <source media="(max-width: 767px)" srcset="assets/image/pht_cource05_sp.png">
+                                            <img class="course-image" src="assets/image/pht_cource05.png" alt="">
+                                        </picture>
+                                        <span class="course-tab-content-title"><i class="fa-solid fa-arrow-right"></i>難関大学・医学部合格を目指す</span>
+                                    </div>
+                                    <!-- 2個目 -->
+                                    <div class="course-tab-content-item">
+                                        <picture>
+                                            <source media="(max-width: 767px)" srcset="assets/image/pht_cource06_sp.png">
+                                            <img class="course-image" src="assets/image/pht_cource06.png" alt="">
+                                        </picture>
+                                        <span class="course-tab-content-title"><i class="fa-solid fa-arrow-right"></i>名門私立大学合格を目指す</span>
+                                    </div>
+                            </div>
+                            <div class="tab-inpane-pc">
+                                <!-- 3個目 -->
+                                <div class="course-tab-content-item">
+                                    <picture>
+                                        <source media="(max-width: 767px)" srcset="assets/image/pht_cource07_sp.png">
+                                        <img class="course-image" src="assets/image/pht_cource07.png" alt="">
+                                    </picture>
+                                    <span class="course-tab-content-title"><i class="fa-solid fa-arrow-right"></i>国公立大学合格を目指す</span>
+                                </div>
+                                <!-- 4個目 -->
+                                <div class="course-tab-content-item last-item">
+                                    <picture>
+                                        <source media="(max-width: 767px)" srcset="assets/image/pht_cource08_sp.png">
+                                        <img class="course-image" src="assets/image/pht_cource08.png" alt="">
+                                    </picture>
+                                    <span class="course-tab-content-title"><i class="fa-solid fa-arrow-right"></i>海外の大学合格を目指す</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <div class="contact">
+                <p>入学ご検討の方は、まずは入学説明会に<br class="no-pc">お越しください</p>
+                <a href="https://example.com/contact" class="contact-btn">入学説明会に申し込む</a>
+            </div>
 
             <!-- <section class="price ">
             <h2 id="title-price">今すぐお申し込みを！</h2>
@@ -165,6 +261,8 @@
 
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Smart Tab -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery-smarttab@4/dist/js/jquery.smartTab.min.js"></script>
         <!-- JSファイル -->
         <script src="assets/script/main.js"></script>
     </body>
