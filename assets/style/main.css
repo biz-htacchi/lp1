@@ -653,6 +653,13 @@ ul {
   }
 }
 
+@media (min-width: 768px) {
+  .reason-image-container {
+    width: 48.3%;
+  }
+}
+
+
 .reason-image {
   max-width: none;
   width: 100%;
@@ -680,7 +687,7 @@ ul {
 @media (min-width: 768px) {
   .contact {
     padding-top: 5.4rem;
-    padding-bottom: 4.5rem;
+    padding-bottom: 4.6rem;
   }
 }
 
@@ -708,17 +715,24 @@ ul {
 }
 .contact-btn:hover {
   opacity: 0.5;
-  margin-right: .4rem;
+  padding-left: calc(5.2rem + 0.75rem);
+  padding-right: calc(5.2rem + 0.75rem);
+  transform: translateX(0.75rem);
 }
 
 @media (min-width: 768px) {
   .contact-btn {
     font-size: 2.4rem;
     line-height: calc(36 / 24);
-    margin-top: 1.8rem;
-    padding: 2rem 4.9rem 2rem 7.1rem;
+    margin-top: 1.75rem;
+    padding: 1.9rem 4.9rem 2rem 7.1rem;
     border-radius: 4rem;
     max-width: 36rem;
+  }
+
+  .contact-btn:hover {
+    padding: 1.9rem 4.9rem 2rem 7.1rem;
+    transform: translateX(0);
   }
 }
 
@@ -730,7 +744,7 @@ ul {
 
 @media (min-width: 768px) {
   .course {
-    margin: 8.05rem auto 6.5rem;
+    margin: 8.05rem auto 6.65rem;
     max-width: 120rem;
   }
 }
@@ -835,7 +849,7 @@ ul {
 
 @media (min-width: 768px) {
   .tab.st-theme-basic>.tab-content>.tab-pane {
-    padding: 1.7rem 2.6rem;
+    padding: 1.5rem 2.6rem;
   }
 }
 
@@ -849,6 +863,7 @@ ul {
 @media (min-width: 768px) {
   .course-tab-content-item {
     margin-bottom: .1rem;
+    width: calc((100% - 3rem) / 2);
   }
 }
 
@@ -906,18 +921,10 @@ ul {
 
 .course-image {
   width: 100%;
-  max-width: none;
-}
-@media (min-width: 768px) {
-  .course-image {
-    width: auto;
-    max-width: none;
-    height: auto;
-  }
 }
 
 
-/* コース
+/* 費用
 --------------------------------------------------- */
 .price {
   margin: 6.6rem 0 6.5rem;
@@ -1093,3 +1100,124 @@ ul {
     padding-left: 16.1rem;
   }
 }
+
+/* FA
+--------------------------------------------------- */
+.about{
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .about {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.image-overlay-container-bg {
+  position:relative;
+  width: 100%;
+  height: 17rem;
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  position: relative;
+  display: block;
+}
+@media (min-width: 768px) {
+  .image-overlay-container-bg {
+    height: 32rem;
+  }
+}
+
+.faq .image-overlay-container-bg{
+  background-image: url('../image/pht_qa_sp.jpg');
+}
+.classroom .image-overlay-container-bg{
+  background-image: url('../image/pht_classrooms_sp.jpg');
+}
+@media (min-width: 768px) {
+  .faq,
+  .classroom {
+    width: 50%;
+  }
+
+  .faq .image-overlay-container-bg{
+    background-image: url('../image/pht_qa.jpg');
+  }
+  .classroom .image-overlay-container-bg{
+    background-image: url('../image/pht_classrooms.jpg');
+  }
+}
+
+.image-overlay-container-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+  transition: background-color 0.3s ease-in-out;
+}
+@media (min-width: 768px) {
+  .image-overlay-container-bg::before {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+}
+
+.image-link-bg {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+@media (min-width: 768px) {
+  .image-link-bg {
+    justify-content: center;
+  }
+}
+
+.overlay-text-bg h2{
+  color: #FFFFFF;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: calc(28 / 22);
+  padding: 1rem 1.6rem;
+  margin-bottom: .3rem;
+}
+@media (min-width: 768px) {
+  .overlay-text-bg h2 {
+    font-size: 3.2rem;
+    line-height: calc(36 / 32);
+    margin-top: .1rem;
+    margin-bottom: 0;
+  }
+}
+
+
+/* ホバー時のエフェクト（任意） */
+.image-overlay-container-bg:hover::before {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* フッター
+--------------------------------------------------- */
+footer {
+  font-family: Poppins, sans-serif;
+  font-size: 1.3rem;
+  line-height: calc(28 / 13);
+  text-align: center;
+  background-color: #DDDDDD;
+  padding: 2.8rem 0 2.7rem 1.5rem;
+}
+@media (min-width: 768px) {
+  footer {
+    padding: 4.5rem 0 4.6rem;
+  }
+}
+
