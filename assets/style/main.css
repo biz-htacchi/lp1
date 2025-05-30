@@ -350,7 +350,7 @@ ul {
 
 @media (min-width: 768px) {
   .mv-catch {
-    top: 16%;
+    top: 15%;
     left: 21.4%;
     width: auto
   }
@@ -478,10 +478,9 @@ ul {
 
 @media (min-width: 768px) {
   .mv-btn-list {
-    position:absolute;
-    bottom: -5.9%;
-    left: 21.3%;
+    justify-content: center;
     flex-direction: row;
+    margin-top: -2.2rem;
   }
 
   .mv-btn {
@@ -538,7 +537,7 @@ ul {
 }
 @media (min-width: 768px) {
   .reason {
-    margin-top: 12.7rem;
+    margin-top: 8.8rem;
     margin-bottom: 6.8rem;
   }
 }
