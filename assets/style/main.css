@@ -4,6 +4,8 @@
 --------------------------------------------------- */
 html{
   font-size: 62.5%;
+  scroll-padding-top: 12rem; /* スクロール位置の調整 */
+  scroll-behavior: smooth; /* スムーズスクロール */
 }
 
 /* レスポンシブデザインのためのフォントサイズ調整 */
@@ -921,6 +923,13 @@ ul {
 
 .course-image {
   width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+@media (min-width: 768px) {
+  .course-image:hover {
+    height: auto;
+    transform: scale(1.2);
+  }
 }
 
 
@@ -1123,6 +1132,7 @@ ul {
   background-repeat: no-repeat;
   position: relative;
   display: block;
+  transition: transform 0.3s ease-in-out;
 }
 @media (min-width: 768px) {
   .image-overlay-container-bg {
@@ -1215,6 +1225,12 @@ ul {
   opacity: 0.5;
 }
 
+@media (min-width: 768px) {
+  .image-overlay-container-bg:hover {
+    transform: scale(1.2);
+    z-index: 99;
+  }
+}
 /* フッター
 --------------------------------------------------- */
 footer {

@@ -4,10 +4,14 @@ var hamburger = $('.hamburger-menu');
 
 // OPEN/CLOSEボタンをクリックしたら
 $('.hamburger-button').on('click', function () {
-
   // .hamburgerの表示・非表示を繰り返す
   hamburger.toggleClass('hamburger-menu-active');
+});
 
+// アンカーリンクをクリックしたら閉じる
+$('.header-btn').on('click', function () {
+  // ハンバーガーメニューを閉じる
+  hamburger.removeClass('hamburger-menu-active');
 });
 
 // 画面幅のサイズが変わったら
