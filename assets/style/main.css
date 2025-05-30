@@ -117,31 +117,32 @@ ul {
   }
 }
 
-
-
 /* ロゴ */
 .header-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: .9rem 0 0 1.6rem;
+  margin: .3rem 0 0 1.6rem;
 }
 
-.header-logo img {
-  width: 16.7rem;
-  max-width: none;
+.header-logo-link {
+  font-family: Poppins, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: calc(33 / 22);
+  color: #005BAC;
 }
 
 @media (min-width: 768px) {
   .header-logo {
     margin: 0;
-    padding: .7rem 0 0 2rem;
+    padding: 0 0 0 2rem;
   }
 
-  .header-logo img {
-    width: 24.2rem;
-    max-width: 100%;
-  }
+.header-logo-link {
+  font-size: 3.2rem;
+  line-height: calc(36 / 32);
+}
 }
 
 .header-btn-contact {
@@ -350,7 +351,7 @@ ul {
 
 @media (min-width: 768px) {
   .mv-catch {
-    top: 15%;
+    top: 15.3%;
     left: 21.4%;
     width: auto
   }
@@ -405,7 +406,7 @@ ul {
   .mv-result-text {
     font-size: 2rem;
     line-height: calc(29 / 20);
-    padding-top: .9rem;
+    padding-top: .7rem;
     margin-left: 1.9rem;
   }
 
@@ -454,7 +455,7 @@ ul {
   .mv-title {
     font-size: 6rem;
     line-height: calc(85 / 60);
-    margin-top: 1.3rem;
+    margin-top: 1.2rem;
   }
 }
 
@@ -537,7 +538,7 @@ ul {
 }
 @media (min-width: 768px) {
   .reason {
-    margin-top: 8.8rem;
+    margin-top: 8.9rem;
     margin-bottom: 6.8rem;
   }
 }
@@ -635,8 +636,8 @@ ul {
 @media (min-width: 768px) {
   .reason-title {
     font-size: 2.4rem;
-    line-height: calc(36 / 20);
-    margin-top: .2rem;
+    line-height: calc(36 / 21);
+    margin-top: .3rem;
   }
 }
 
@@ -648,7 +649,7 @@ ul {
 }
 @media (min-width: 768px) {
   .reason-description {
-    margin-top: 1.3rem;
+    margin-top: 1.55rem;
   }
 }
 
@@ -1162,7 +1163,7 @@ ul {
 }
 @media (min-width: 768px) {
   .image-overlay-container-bg::before {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0);
   }
 }
 
@@ -1181,6 +1182,10 @@ ul {
   }
 }
 
+.overlay-text-bg {
+  z-index: 1;
+}
+
 .overlay-text-bg h2{
   color: #FFFFFF;
   font-size: 2.2rem;
@@ -1188,6 +1193,8 @@ ul {
   line-height: calc(28 / 22);
   padding: 1rem 1.6rem;
   margin-bottom: .3rem;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 @media (min-width: 768px) {
   .overlay-text-bg h2 {
@@ -1199,9 +1206,13 @@ ul {
 }
 
 
-/* ホバー時のエフェクト（任意） */
+/* ホバー時のエフェクト */
 .image-overlay-container-bg:hover::before {
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.image-overlay-container-bg:hover .overlay-text-bg h2 {
+  opacity: 0.5;
 }
 
 /* フッター
