@@ -815,6 +815,7 @@ ul {
     font-size: 2.4rem;
     line-height: calc(33 / 24);
     padding: 2.1rem 0;
+    border-radius: 1.2rem 1.2rem 0 0;
   }
 }
 
@@ -841,6 +842,7 @@ ul {
   .tab-content {
     margin: 0 2rem;
     padding-top: 1.2rem;
+    border-radius: 0 0 1.2rem 1.2rem;
   }
 }
 
