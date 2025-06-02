@@ -907,7 +907,6 @@ ul {
   font-size: 2rem;
   margin-right: 1.2rem;
 }
-}
 
 /* PC整列 */
 .tab-inpane-pc {
@@ -929,6 +928,10 @@ ul {
   transition: transform 0.3s ease-in-out;
 }
 @media (min-width: 768px) {
+  .course-tab-content-item picture{
+    overflow: hidden;
+  }
+
   .course-image:hover {
     height: auto;
     transform: scale(1.2);
@@ -1153,6 +1156,7 @@ ul {
   .faq,
   .classroom {
     width: 50%;
+    overflow: hidden;
   }
 
   .faq .image-overlay-container-bg{
