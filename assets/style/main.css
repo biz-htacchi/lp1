@@ -97,6 +97,7 @@ ul {
   height: 7rem;
   width: 100%;
   z-index: 999;
+  box-shadow: 0 .2rem .8rem rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -109,7 +110,7 @@ ul {
 @media (min-width: 768px) {
   .header {
     height: 10.1rem;
-    box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 .8rem 1.6rem rgba(0, 0, 0, 0.1);
   }
 
   .header-container {
