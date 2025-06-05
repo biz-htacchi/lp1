@@ -930,6 +930,7 @@ ul {
 @media (min-width: 768px) {
   .course-tab-content-item picture{
     overflow: hidden;
+    border-radius: 1.2rem;
   }
 
   .course-image:hover {
