@@ -100,7 +100,7 @@ ul {
   box-shadow: 0 .2rem .8rem rgba(0, 0, 0, 0.1);
 }
 
-.header-container {
+.header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -113,7 +113,7 @@ ul {
     box-shadow: 0 .8rem 1.6rem rgba(0, 0, 0, 0.1);
   }
 
-  .header-container {
+  .header__container {
     margin: 0 auto;
     height: 10.1rem;
     max-width: 120rem;
@@ -121,14 +121,14 @@ ul {
 }
 
 /* ロゴ */
-.header-logo {
+.header__logo {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: .3rem 0 0 1.6rem;
 }
 
-.header-logo-link {
+.header__logo-link {
   font-family: Poppins, sans-serif;
   font-size: 2.2rem;
   font-weight: 700;
@@ -137,18 +137,18 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .header-logo {
+  .header__logo {
     margin: 0;
     padding: 0 0 0 2rem;
   }
 
-.header-logo-link {
+.header__logo-link {
   font-size: 3.2rem;
   line-height: calc(36 / 32);
 }
 }
 
-.header-btn-contact {
+.header__btn-contact {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,7 +163,7 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .header-btn-contact {
+  .header__btn-contact {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,14 +179,14 @@ ul {
     transition: opacity 0.2s ease-in-out;
   }
 
-  .header-btn-contact:hover {
+  .header__btn-contact:hover {
     opacity: 0.5;
   }
 
 }
 
 /* ハンバーガーボタン */
-.hamburger-button {
+.header__hamburger-button {
   position: fixed;
   top: 0;
   right: 0;
@@ -199,7 +199,7 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .hamburger-button {
+  .header__hamburger-button {
     display: none;
   }
 }
@@ -213,7 +213,7 @@ ul {
 ------------------------------------------ */
 /* SP */
 @media (max-width: 767.9px) {
-  .hamburger-menu {
+  .header__hamburger-menu {
     position: fixed;
     padding: 0 1.95rem;
     top: 7rem;
@@ -231,11 +231,11 @@ ul {
     transition: transform 0.3s ease-out, visibility 0s 0.3s, opacity 0.3s ease-out;
     }
 
-  .hamburger-menu .flex {
+  .header__hamburger-menu .flex {
     flex-direction: column;
   }
 
-  .header-btn {
+  .header__btn {
     padding: 2rem 0.1rem 0rem 0rem;
     font-size: 1.7rem;
     font-weight: 500;
@@ -245,30 +245,30 @@ ul {
     height: 6.45rem;
   }
 
-  .header-btn a{
+  .header__btn a{
     display:flex;
     align-items: center;
     color: #FFFFFF;
   }
 
-  .header-btn .fa-solid {
+  .header__btn .fa-solid {
     display: inline;
     font-size: 1.5rem;
     margin-right: 1.2rem;
   }
 
-  .hamburger-menu-list .header-btn:last-child a {
+  .header__hamburger-menu-list .header__btn:last-child a {
     letter-spacing: .4rem;
   }
 
-  .hamburger-menu-list .header-btn:last-child a .fa-solid{
+  .header__hamburger-menu-list .header__btn:last-child a .fa-solid{
     margin-right: .8rem;
   }
 
 }
 
 /* スライドイン後の位置の指定 */
-.hamburger-menu-active {
+.header__hamburger-menu-active {
   transform: translateX(0); /* 元の位置に戻す */
   opacity: 1;
   visibility: visible;
@@ -279,12 +279,12 @@ ul {
 /* ナビゲーション */
 /* PC */
 @media (min-width: 768px) {
-  .header-nav {
+  .header__nav {
     display: flex;
     padding-right: 2rem;
   }
 
-  .header-nav-list {
+  .header__nav-list {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -292,25 +292,25 @@ ul {
     column-gap: 4.8rem;
   }
 
-  .header-btn {
+  .header__btn {
     font-size: 2rem;
     font-weight: 500;
     line-height: calc(36 / 20);
   }
 
-  .header-btn a {
+  .header__btn a {
     color: #333333;
   }
 
-  .header-btn:hover a{
+  .header__btn:hover a{
     color: #0A76E2;
   }
 
-  .header-btn .fa-solid {
+  .header__btn .fa-solid {
     display: none;
   }
 
-  .header-nav-list .header-btn:last-child a  {
+  .header__nav-list .header__btn:last-child a  {
     letter-spacing: .4rem;
   }
 }
