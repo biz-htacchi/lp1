@@ -732,13 +732,11 @@ ul {
 }
 .contact__btn:hover {
   opacity: 0.5;
-  padding-left: calc(5.2rem + 0.75rem);
-  padding-right: calc(5.2rem + 0.75rem);
+  width: 32rem;
   transform: translateX(0.75rem);
 }
 
 .contact__btn-freetrial{
-    color:#FFFFFF;
     background: #F6AA00;
 }
 
@@ -754,7 +752,7 @@ ul {
   }
 
   .contact__btn:hover {
-    padding: 1.9rem 4.9rem 2rem 7.1rem;
+    width: 36rem;
     transform: translateX(0);
   }
 }
