@@ -8,18 +8,6 @@ html{
   scroll-behavior: smooth; /* スムーズスクロール */
 }
 
-/* レスポンシブデザインのためのフォントサイズ調整 */
-@media screen and (max-width: 1920px) and (min-width: 768px) {
-  html {
-    font-size: calc(10 / 1920 * 100vw);
-  }
-}
-@media screen and (max-width: 767.9px) {
-  html {
-    font-size: calc(10 / 375 * 100vw);
-  }
-}
-
 body {
   font-family: 'Noto Sans JP', sans-serif;
   line-height: 1.6;
@@ -698,7 +686,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3.7rem 1.6rem 2.9rem;
+  padding: 3.7rem 1.6rem 3rem;
   background-color: rgba(255, 85, 85, 0.1);
 }
 @media (min-width: 768px) {
@@ -708,19 +696,31 @@ ul {
   }
 }
 
-.contact p {
+.contact__text {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: calc(28 / 16);
   text-align: center;
 }
 
+.contact__btn-content{
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .contact__btn-content{
+    flex-direction: row;
+    gap: 3.2rem;
+  }
+}
+
 .contact__btn{
- display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin: 1rem auto;
-    padding: 1.7rem 5.2rem;
+    width: 30.5rem;
+    height: 6.9rem;
     font-size: 2rem;
     font-weight: 700;
     line-height: calc(36 / 20);
@@ -737,12 +737,18 @@ ul {
   transform: translateX(0.75rem);
 }
 
+.contact__btn-freetrial{
+    color:#FFFFFF;
+    background: #F6AA00;
+}
+
 @media (min-width: 768px) {
   .contact__btn {
     font-size: 2.4rem;
     line-height: calc(36 / 24);
     margin-top: 1.75rem;
-    padding: 1.9rem 4.9rem 2rem 7.1rem;
+    width: 36rem;
+    height: 7.5rem;
     border-radius: 4rem;
     max-width: 36rem;
   }
