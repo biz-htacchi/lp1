@@ -8,6 +8,18 @@ html{
   scroll-behavior: smooth; /* スムーズスクロール */
 }
 
+/* レスポンシブデザインのためのフォントサイズ調整 */
+@media screen and (max-width: 1920px) and (min-width: 768px) {
+  html {
+    font-size: calc(10 / 1920 * 100vw);
+  }
+}
+@media screen and (max-width: 767.9px) {
+  html {
+    font-size: calc(10 / 375 * 100vw);
+  }
+}
+
 body {
   font-family: 'Noto Sans JP', sans-serif;
   line-height: 1.6;
