@@ -796,56 +796,59 @@ ul {
 }
 
 /* タブナビゲーション */
-.course__tab.st>.course__nav {
-  column-gap: 0.5rem;
-  flex-direction: row !important;
+.course__tab-buttons {
+    display: flex;
+    column-gap: 1.5rem;
+    padding: 0 1.6rem;
 }
-
-.course__tab.st-theme-basic>.course__nav {
-  box-shadow: none;
-  margin: 0 1.6rem;
-  column-gap: 1.5rem;
-}
-@media (min-width: 768px) {
-  .course__tab.st-theme-basic>.course__nav {
-    margin: 0 2rem;
-    column-gap: 3.5rem;
+@media (min-width:769px){
+  .course__tab-buttons {
+      display: flex;
+      column-gap: 3.5rem;
+      padding: 0 2rem;
   }
 }
 
-.course__tab.st-theme-basic>.course__nav .course__nav-link {
-  padding-top: 1.5rem;
-  padding-bottom: 1.25rem;
-  background-color: #f0f0f0;
-  color: rgba(51, 51, 51, 0.5);
-  border-radius: 0.5rem 0.5rem 0 0;
-  font-size: 1.8rem;
-  font-weight: 700;
-  line-height: calc(36 / 18);
+.course__tab-button {
+    flex: 1;
+    max-width: 56.5rem;
+    height: 6.6rem;
+    padding: 1.4rem 0 1.25rem;
+    border: none;
+    background-color: #F0F0F0;
+    color: rgba(51, 51, 51, 0.5);
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    outline: none;
+    border-radius: 1.2rem 1.2rem 0 0;
 }
-
-@media (min-width: 768px) {
-  .course__tab.st-theme-basic>.course__nav .course__nav-link {
-    font-size: 2.4rem;
+@media (min-width:769px){
+  .course__tab-button {
+    font-size:2.4rem;
     line-height: calc(33 / 24);
     padding: 2.1rem 0;
     border-radius: 1.2rem 1.2rem 0 0;
   }
 }
 
-.st.st-justified>.course__nav>li {
-  padding-top: 0.063rem;
+.course__tab-button:hover {
+    background-color: #E0E0E0;
+}
+.course__tab-button.active {
+    background-color: #F2F9FF;
+    color: #333333;
 }
 
-/* アクティブ状態 */
-.course__tab.st-theme-basic>.course__nav .course__nav-link.active {
-  color: #333333 !important;
-  background-color: #F2F9FF;
+.course__tab-pane {
+    display: none; /* 初期状態では非表示 */
 }
 
-.course__tab.st-theme-basic>.course__nav .course__nav-link.active::after {
-  background-color: unset !important;
+.course__tab-pane.active {
+    display: block; /* activeクラスが付与されたら表示 */
 }
+
 
 /* タブコンテンツ */
 .course__tab-content {
@@ -860,25 +863,12 @@ ul {
   }
 }
 
-.course__tab.st-theme-basic>.course__tab-content>.course__tab-pane {
-  flex-direction: column;
-  row-gap: 1.4rem;
-  padding: 1rem;
-}
-
-@media (min-width: 768px) {
-  .course__tab.st-theme-basic>.course__tab-content>.course__tab-pane {
-    padding: 1.5rem 2.6rem;
-  }
-}
-
 .course__tab-content-item {
   display: flex;
   flex-direction: column;
   margin-top: .5rem;
   margin-bottom: 2.5rem;
 }
-
 @media (min-width: 768px) {
   .course__tab-content-item {
     margin-bottom: .1rem;
@@ -944,14 +934,19 @@ ul {
   transition: transform 0.3s ease-in-out;
 }
 @media (min-width: 768px) {
-  .course__tab-content-item picture{
+  .course__tab-content-item picture {
     overflow: hidden;
     border-radius: 1.2rem;
   }
 
-  .course__image:hover {
-    height: auto;
+  /* ここを修正！ */
+  .course__tab-content-item:hover .course__image {
     transform: scale(1.2);
+  }
+
+  .course__image {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
   }
 }
 

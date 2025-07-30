@@ -25,7 +25,7 @@
         <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
 
         <!-- Smart Tab -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-smarttab@4/dist/css/smart_tab_all.min.css">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-smarttab@4/dist/css/smart_tab_all.min.css"> -->
 
         <!-- リセットCSS -->
         <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
@@ -137,15 +137,15 @@
             <section class="course">
                 <h2 class="course__main-title" id="title-course">コース・目的</h2>
 
-                <div id="js-smarttab" class="course__tab">
+                <div class="course__tab">
                     <!-- タブナビゲーション -->
-                    <ul class="nav course__nav">
-                        <li><a class="nav-link course__nav-link" href="#tab-1">学年別から選ぶ</a></li>
-                        <li><a class="nav-link course__nav-link" href="#tab-2">目的別から選ぶ</a></li>
-                    </ul>
+                    <div class="course__tab-buttons">
+                        <button class="course__tab-button active" data-tab="tab-1">学年別から選ぶ</button>
+                        <button class="course__tab-button" data-tab="tab-2">目的別から選ぶ</button>
+                    </div>
                     <div class="tab-content course__tab-content">
                         <!-- タブ1 -->
-                        <div id="tab-1" class="tab-pane course__tab-pane" role="tabpanel">
+                        <div id="tab-1" class="tab-pane course__tab-pane active" role="tabpanel">
                             <div class="course__tab-inpane">
                                 <div class="course__tab-inpane-pc">
                                     <!-- 1個目 -->
@@ -327,7 +327,7 @@
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <!-- Smart Tab -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery-smarttab@4/dist/js/jquery.smartTab.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/jquery-smarttab@4/dist/js/jquery.smartTab.min.js"></script> -->
         <!-- JSファイル -->
         <script src="/assets/script/main.js"></script>
     </body>
